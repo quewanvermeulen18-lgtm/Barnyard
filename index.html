@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Barnyard Theatre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0a0514; color: #e8e0f0; }
+        .font-display { font-family: 'Bebas Neue', sans-serif; }
+        .text-gradient { background: linear-gradient(135deg, #ff006e, #ffb700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background: rgba(74,0,128,0.2); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; transition: all 0.3s; }
+        .card:hover { border-color: rgba(255,0,110,0.4); transform: translateY(-4px); }
+        .venue { background: linear-gradient(90deg, #4a0080, #2d0050); border-radius: 12px; padding: 20px; transition: all 0.3s; }
+        .venue:hover { background: linear-gradient(90deg, #ff006e, #4a0080); }
+        .btn-primary { background: #ff006e; color: white; padding: 14px 32px; border-radius: 999px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; }
+        .btn-secondary { border: 1px solid rgba(255,255,255,0.2); color: white; padding: 14px 32px; border-radius: 999px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 bg-[#0a0514]/90 backdrop-blur-xl border-b border-white/5 px-4 py-4">
+        <div class="flex items-center justify-between max-w-6xl mx-auto">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" class="w-8 h-8"><path d="M30 80 L30 30 L50 20 L50 70" stroke="#1a0a2e" stroke-width="4" fill="none"/><path d="M50 20 L70 30 L70 80" stroke="#1a0a2e" stroke-width="4" fill="none"/><circle cx="35" cy="75" r="8" stroke="#1a0a2e" stroke-width="3" fill="none"/><circle cx="65" cy="75" r="8" stroke="#1a0a2e" stroke-width="3" fill="none"/></svg>
+                </div>
+                <div>
+                    <span class="font-display text-xl text-white tracking-wider">BARNYARD</span>
+                    <span class="block text-[8px] uppercase tracking-[0.3em] text-white/50">Theatre</span>
+                </div>
+            </div>
+            <a href="#shows" class="btn-primary text-sm">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-sm uppercase tracking-[0.3em] text-[#ff006e] font-semibold mb-4">South Africa's Premier Live Entertainment</p>
+            <h1 class="font-display text-7xl md:text-9xl leading-[0.85] mb-6">
+                THE<br>
+                <span class="text-gradient">BARNYARD</span><br>
+                <span class="text-4xl md:text-6xl text-white/40 italic">Theatre</span>
+            </h1>
+            <p class="text-white/50 text-lg mb-8 max-w-xl mx-auto">Five world-class venues. Unforgettable live music, tribute shows, and entertainment since 1996.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#shows" class="btn-primary">View Shows</a>
+                <a href="#venues" class="btn-secondary">Our Venues</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues -->
+    <section id="venues" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-5xl text-center mb-12">Five Venues. <span class="text-gradient">One Experience.</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="venue text-center"><p class="text-xs text-white/50">East Rand, JHB</p><p class="font-display text-xl">EMPERORS PALACE</p></div>
+                <div class="venue text-center"><p class="text-xs text-white/50">Menlyn Park, PTA</p><p class="font-display text-xl">MENLYN</p></div>
+                <div class="venue text-center"><p class="text-xs text-white/50">West Rand, JHB</p><p class="font-display text-xl">SILVERSTAR</p></div>
+                <div class="venue text-center"><p class="text-xs text-white/50">Durban</p><p class="font-display text-xl">SUNCOAST</p></div>
+                <div class="venue text-center col-span-2 md:col-span-1"><p class="text-xs text-white/50">Bellville, CT</p><p class="font-display text-xl">TYGER VALLEY</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows -->
+    <section id="shows" class="py-16 px-4 bg-[#4a0080]/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-10">
+                <h2 class="font-display text-5xl">Now <span class="text-gradient">Showing</span></h2>
+                <a href="#" class="text-[#ff006e] text-sm font-semibold">View All →</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" class="w-full h-48 object-cover rounded-xl mb-4" alt="Absolute 80s">
+                    <span class="text-xs bg-[#ff006e] text-white px-3 py-1 rounded-full">Featured</span>
+                    <h3 class="font-display text-2xl mt-2">ABSOLUTE 80s</h3>
+                    <p class="text-white/50 text-sm mt-1">Step back into the Neon Era. The best hits & memories!</p>
+                    <p class="text-xs text-white/30 mt-2">Emperors Palace • Tyger Valley</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&q=80" class="w-full h-48 object-cover rounded-xl mb-4" alt="Big Top Rock">
+                    <span class="text-xs bg-[#ffb700] text-black px-3 py-1 rounded-full">New</span>
+                    <h3 class="font-display text-2xl mt-2">BIG TOP ROCK</h3>
+                    <p class="text-white/50 text-sm mt-1">Circus spectacular meets rock concert.</p>
+                    <p class="text-xs text-white/30 mt-2">Suncoast</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e5?w=600&q=80" class="w-full h-48 object-cover rounded-xl mb-4" alt="One Vision">
+                    <h3 class="font-display text-2xl mt-2">ONE VISION</h3>
+                    <p class="text-white/50 text-sm mt-1">Tribute to Neil Diamond, Freddie Mercury & Celine Dion.</p>
+                    <p class="text-xs text-white/30 mt-2">Silverstar • Menlyn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Tours -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-4xl mb-8">Live <span class="text-gradient">Tours</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=100&q=80" class="w-16 h-16 rounded-lg object-cover" alt="Roan Ash">
+                    <div>
+                        <p class="font-semibold">ROAN ASH</p>
+                        <p class="text-xs text-white/50">8 May Menlyn • 9 May Silverstar</p>
+                    </div>
+                </div>
+                <div class="card flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=100&q=80" class="w-16 h-16 rounded-lg object-cover" alt="Elvis">
+                    <div>
+                        <p class="font-semibold">ELVIS & FRIENDS</p>
+                        <p class="text-xs text-white/50">10 May Silverstar • 21 Jun Menlyn</p>
+                    </div>
+                </div>
+                <div class="card flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=100&q=80" class="w-16 h-16 rounded-lg object-cover" alt="Ruhan">
+                    <div>
+                        <p class="font-semibold">RUHAN DU TOIT</p>
+                        <p class="text-xs text-white/50">3 Jun Emperors • 12 Jul Silverstar</p>
+                    </div>
+                </div>
+                <div class="card flex items-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=100&q=80" class="w-16 h-16 rounded-lg object-cover" alt="Demi">
+                    <div>
+                        <p class="font-semibold">DEMI LEE MOORE</p>
+                        <p class="text-xs text-white/50">17 Jun Emperors • 20 Jun Menlyn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto relative rounded-3xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80" class="w-full h-64 md:h-80 object-cover" alt="Specials">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#4a0080]/90 to-transparent flex flex-col justify-center p-8 md:p-12">
+                <p class="text-[#ffb700] font-semibold uppercase tracking-widest text-sm mb-2">Limited Time</p>
+                <h3 class="font-display text-4xl md:text-6xl text-white mb-4">Autumn Break Specials</h3>
+                <div class="flex flex-wrap gap-3 text-white/90 text-sm">
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Kids U12 FREE</span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Buy 1 Get 1 Free</span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Pensioners 50% Off</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 px-4 bg-[#4a0080]/5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-5xl text-center mb-12">What We <span class="text-gradient">Offer</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card">
+                    <h3 class="font-display text-2xl text-[#ff006e] mb-2">CORPORATE EVENTS</h3>
+                    <p class="text-white/50 text-sm">Book a venue with or without the show! Perfect for Year End Parties, Product Launches, Team Builders and more.</p>
+                </div>
+                <div class="card">
+                    <h3 class="font-display text-2xl text-[#ffb700] mb-2">CONFERENCING</h3>
+                    <p class="text-white/50 text-sm">Tailor-made packages to suit your budget. Include a Barnyard show for extra impact.</p>
+                </div>
+                <div class="card">
+                    <h3 class="font-display text-2xl text-green-400 mb-2">FOOD & DRINKS</h3>
+                    <p class="text-white/50 text-sm">Fully stocked bar, coffee & snack bar, in-house pizza deli. Platters and gourmet meals available.</p>
+                </div>
+                <div class="card">
+                    <h3 class="font-display text-2xl text-[#4a0080] mb-2">FUNDRAISING</h3>
+                    <p class="text-white/50 text-sm">Raise funds for your charity, school, or NPO. Fun, affordable, and profitable.</p>
+                </div>
+                <div class="card">
+                    <h3 class="font-display text-2xl text-red-400 mb-2">SPECIALS</h3>
+                    <p class="text-white/50 text-sm">Ticket discounts, limited offers, and exclusive deals. Check regularly or sign up for alerts.</p>
+                </div>
+                <div class="card">
+                    <h3 class="font-display text-2xl text-blue-400 mb-2">AUDITIONS</h3>
+                    <p class="text-white/50 text-sm">Think you have what it takes? Seasoned performer or newcomer — we want to see your talent!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loyalty -->
+    <section id="loyalty" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-sm uppercase tracking-[0.3em] text-[#ffb700] font-semibold mb-4">Barnyard Loyalty Club</p>
+                <h2 class="font-display text-5xl mb-6">Get Rewarded <span class="text-gradient">Nationwide</span></h2>
+                <p class="text-white/50 mb-6">Join free — quick, simple & free! Earn Barnyard Bucks (BB) at any venue.</p>
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[#ff006e]/20 flex items-center justify-center text-[#ff006e] font-bold text-sm">25</div><p class="text-sm">BB for Joining</p></div>
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[#ffb700]/20 flex items-center justify-center text-[#ffb700] font-bold text-sm">50</div><p class="text-sm">BB on Your Birthday</p></div>
+                    <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[#4a0080]/40 flex items-center justify-center text-[#4a0080] font-bold text-sm">100</div><p class="text-sm">BB to Use for Your Birthday</p></div>
+                </div>
+                <a href="#" class="btn-primary">Join Now — It's Free</a>
+            </div>
+            <div class="rounded-3xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80" class="w-full h-80 object-cover" alt="Experience">
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 px-4 text-center">
+        <h3 class="font-display text-4xl mb-4">Stay in the <span class="text-gradient">Loop</span></h3>
+        <p class="text-white/50 mb-6">Get notified of latest specials, shows, and attractions.</p>
+        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input type="email" placeholder="Your email" class="flex-1 px-6 py-3 bg-white/5 border border-white/10 rounded-full text-white placeholder-white/30 focus:outline-none focus:border-[#ff006e]">
+            <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 pt-12 pb-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-white/30 text-sm mb-4">Emperors Palace: 011 928 1108 • Menlyn: 012 880 2727 • Silverstar: 010 593 0744 • Suncoast: 031 940 0500 • Tyger Valley: 087 094 6124</p>
+            <div class="flex justify-center gap-4 mb-6">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50">FB</a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50">YT</a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50">TW</a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50">LI</a>
+            </div>
+            <p class="text-white/20 text-xs"> 2026 The Barnyard Theatres. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
